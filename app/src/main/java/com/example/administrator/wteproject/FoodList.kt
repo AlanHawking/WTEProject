@@ -24,10 +24,10 @@ class FoodList : AppCompatActivity() {
         thisAdapter=object :BaseAdapterPlus<FoodBriefItem>(datas,R.id.foodListListView){
             override fun bindView(viewHolder:ViewHolder,obj:FoodBriefItem?){
                 viewHolder.setText(R.id.foodListItemName,obj!!.FoodName)
-                viewHolder.setText(R.id.foodListItemPrice,"${obj!!.FoodPriceMin}-${obj.FoodPriceMax}元")
+                viewHolder.setText(R.id.foodListItemPrice,"${obj.FoodPriceMin}-${obj.FoodPriceMax}元")
                 val ratingBar: RatingBar =viewHolder.getView(R.id.foodListItemRate)
                 ratingBar.max=5
-                ratingBar.rating=obj!!.FoodRate
+                ratingBar.rating=obj.FoodRate
             }
         }
 

@@ -33,14 +33,11 @@ class ViewHolder {
     companion object {
         //绑定ViewHolder与item
         fun bind(context: Context, convertView: View, parent: ViewGroup, layoutRes: Int, position: Int): ViewHolder {
-            var holder: ViewHolder
-            if (convertView == null) {
-                holder = ViewHolder(context, parent, layoutRes);
-            } else {
-                holder = convertView.tag as ViewHolder
-                holder.item = convertView
-            }
+            var holder: ViewHolder = convertView.tag as ViewHolder
+
+            holder.item = convertView
             holder.position = position
+
             return holder
         }
     }
@@ -48,10 +45,9 @@ class ViewHolder {
     @SuppressWarnings("unchecked")
     fun <T:View>getView(id:Int): T {
         var t:T = mViews.get(id) as T
-        if (t == null) {
-            t = item.findViewById(id)
-            mViews.put(id, t)
-        }
+
+        t = item.findViewById(id)
+        mViews.put(id, t)
         return t
     }
 
