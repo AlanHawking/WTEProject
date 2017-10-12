@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/foodListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@color/colorBGSilver"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="菜品列表"
+            android:layout_gravity="center"
+            >
+
+        </TextView>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:text="添加"
+            android:layout_alignParentRight="true"
+            >
+
+        </Button>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/foodListHeaderSPLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBGSplitLine"
+        android:layout_below="@id/foodListHeader"
+        android:orientation="horizontal"
+        ></LinearLayout>
+
+    <ListView
+        android:id="@+id/foodListListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodListHeaderSPLine"
+        >
+
+
+
+    </ListView>
+
+</RelativeLayout>

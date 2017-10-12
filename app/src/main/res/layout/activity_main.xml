@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.wteproject.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:id="@+id/mainActivitySearchBar"
+        android:layout_alignParentTop="true"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入搜索的饭店名称"
+            android:layout_weight="8"
+            android:id="@+id/mainActivitySearchText"
+            android:background="@drawable/search_text_bottom_line"
+            android:textColorHint="#ffffff"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="搜索"
+            android:id="@+id/mainActivitySearchBtn"
+            />
+
+    </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/mainActivitySearchBar"
+            android:background="@color/colorPrimary"
+            android:id="@+id/mainActivityMainType"
+            >
+
+            <RadioButton
+                style="@style/menuItems"
+                android:text="全部"
+                android:checked="true"
+                />
+
+            <RadioButton
+                style="@style/menuItems"
+                android:text="快餐"
+                />
+
+            <RadioButton
+                style="@style/menuItems"
+                android:text="中餐"
+                 />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainActivitySubType"
+            android:layout_below="@id/mainActivityMainType"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:paddingLeft="1dp"
+            >
+
+            <RadioButton
+                style="@style/menuSubItems"
+                android:text="全部"
+                 />
+
+            <RadioButton
+                style="@style/menuSubItems"
+                android:text="&lt;1KM"
+                 />
+
+            <RadioButton
+                style="@style/menuSubItems"
+                android:text="1KM-2KM"
+                />
+
+        </RadioGroup>
+
+</RelativeLayout>

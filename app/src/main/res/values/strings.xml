@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WTEProject</string>
+    <string name="food_default_name">菜名</string>
+</resources>
